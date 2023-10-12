@@ -49,5 +49,18 @@ int main()
     {
         cout << "Tank is full" << endl;
     }
+    else
+    {
+        cout << "Tank is not full" << endl;
+    }
 
+
+    if (level > 0)
+    {
+        cout << "Tank is not empty" << endl;
+    }
+    else
+    {
+        cout << "Tank is empty" << endl;
+    }
 }
