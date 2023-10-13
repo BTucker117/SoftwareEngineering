@@ -28,9 +28,41 @@ int main()
     getline(std::cin, input);   //Read a line (users types this in)
     istringstream iss(input);   //Create a string "stream" (sequence of words)
     string word;                //This will hold the next word
+    int count = 0;
     while (iss >> word) {       //Read the next word (if there is one)
         cout << word << endl;   //Output each word in turn
+        if (word == "the")
+        {
+            count = count + 1;
+        }
+        else
+        {
+            // Do nothing
+        }
     }
+    printf("The work 'the' was used %d times", count);
+
+
+    /*
+    int num[] = { 2, 3, 4, 5 };
+    string newnums[sizeof(num)];
+   
+
+    num[0] = newnums[3];
+    num[1] = newnums[2];
+    num[2] = newnums[1];
+    num[3] = newnums[0];
+
+    Don't fucking work
+
+   */
+
+
+
+
+
+
+
+
 
 }
-
