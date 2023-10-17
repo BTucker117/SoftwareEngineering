@@ -41,28 +41,60 @@ int main()
         }
     }
     printf("The work 'the' was used %d times", count);
+    cout << endl;
 
 
-    /*
+    
     int num[] = { 2, 3, 4, 5 };
-    string newnums[sizeof(num)];
+    int newnums[4] ;
+    int newernums[4];
+    cout << "Num = " << sizeof num << endl;
+    cout << "Newnums = " << sizeof newnums << endl;
    
 
-    num[0] = newnums[3];
-    num[1] = newnums[2];
-    num[2] = newnums[1];
-    num[3] = newnums[0];
+    newnums[3] = num [0];
+    newnums[2] = num [1];
+    newnums[1] = num [2];
+    newnums[0] = num [3];
 
-    Don't fucking work
+    newernums[3] = num[0];
+    newernums[2] = num[1];
+    newernums[1] = num[2];
+    newernums[0] = num[3];
 
-   */
+    cout << "Num = " << num << endl;
+    cout << "Newnums = " << newnums << endl;
 
+    cout << num[0] << num[1] << num[2] << num[3] << endl;
+    cout << num << endl;
 
+    for (int i = 0; i < 4; ++i)
+    {
+        cout << *(newernums + i) << endl;
+    }
 
+    cout << endl; 
+    
 
+    int _swap[] = { 2, 3, 4, 5 };
 
+    for (int j = 0; j < 4; ++j)
+    {
+        cout << *(_swap + j) << endl;
+    }
 
+    int n = sizeof(_swap) / sizeof(_swap[0]);
 
+    for (int k = 0; k < n / 2; k++)
+    {
+        swap(_swap[k], _swap[n - k - 1]);
+    }
 
+    cout << endl;
+
+    for (int l = 0; l < 4; ++l)
+    {
+        cout << *(_swap + l) << endl;
+    }
 
 }
