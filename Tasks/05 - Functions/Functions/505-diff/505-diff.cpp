@@ -3,7 +3,7 @@ using namespace std;
 
 //Function prototypes
 int sub(int u, int v);
-
+int absDiff(int x, int z);
 
 int main()
 {
@@ -32,10 +32,14 @@ int main()
     // ***2***
     
 
-    //int diff = absDiff(var1, var2);
+    int diff2 = absDiff(var1, var2);
+    
 
-    // print out the results
+     // print out the results
     cout << "Absolute diff = " << diff << endl;
+
+    //int diff = absDiff(var1, var2);
+    cout << "Absolute difference = " << diff2 << endl;
 }
 
 // Simple function to subtract
@@ -43,5 +47,23 @@ int main()
 int sub(int u, int v)
 {
     int y = u - v;
+    return y;
+}
+
+int absDiff(int u, int v)
+{
+    // create variables to hold the reslts of the calculation
+    int y = 0;
+
+    // Calculate the difference
+    if (u >= v)               // check which variable is larger
+    {
+        y = sub(u, v);     // do the subtraction
+    }
+    else
+    {
+        y = sub(v, u);     // do the subtraction
+    }
+
     return y;
 }

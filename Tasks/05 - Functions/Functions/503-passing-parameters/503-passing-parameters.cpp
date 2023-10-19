@@ -9,6 +9,21 @@ void displayBanner(int stringLen)
 	cout << endl;
 }
 
+void displaywithinbanner(string message)
+{
+	int l = message.length();
+
+	displayBanner(l);
+
+	cout << "* ";
+	cout << message;
+	cout << " *";
+
+	cout << endl;
+
+	displayBanner(l);
+}
+
 int main()
 {
 	const string message = "Welcome to Computer Science";
@@ -25,6 +40,12 @@ int main()
 
 	//Write the banner below
 	displayBanner(L);
+
+
+
+	//Write the new function that does it all
+
+	displaywithinbanner(message);
 
 	//Tell the calling shell all is well
 	return 0;
