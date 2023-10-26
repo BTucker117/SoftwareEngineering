@@ -49,11 +49,17 @@ int main()
     // Use a loop to read all remaining lines
     // Hint - `inputStream.eof()` to check if the end of file character was read
 
+    while (inputStream.eof() == false)
+    {
+        getline(inputStream, nextLine);
 
+        cout << "Read in the lines: " << nextLine << "\n";
 
+        allLines = allLines + nextLine + "\n";
 
+    }
 
-
+    cout << allLines;
 
     // End of solution
     cout << endl << endl << "Complete String: " << endl << allLines << endl;

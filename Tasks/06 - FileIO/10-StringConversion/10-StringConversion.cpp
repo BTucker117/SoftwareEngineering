@@ -30,7 +30,7 @@ int main()
     int moduleNumber;
     string nextWord;
 
-    while (iss.eof() == false) 
+    while (iss.eof() == false)
     {
         //Try to read the next word
         iss >> nextWord;
@@ -47,7 +47,16 @@ int main()
             //TODO:
             // Read the next word
             // If successful, try to convert to an integer then break from the while loop
+            if (!iss.fail()) {
+                //Convert a string to an integer
+                moduleNumber = stoi(nextWord);
+                //Write the new module code
+                cout << "COMP" << moduleNumber + 1 << endl;
+                //We are done! Break from the outer loop
+                break;
+            }
         }
+    
     }
 
     // Done

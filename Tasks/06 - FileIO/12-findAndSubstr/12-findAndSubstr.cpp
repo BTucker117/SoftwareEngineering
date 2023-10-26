@@ -64,6 +64,28 @@ int main()
         return -1;
     }
 
+    int poss = dataString.find("Area:");
+    if (poss == -1) {
+        cerr << "Identifier Area: is missing from file" << endl;
+        return -1;
+    }
+
+    //Split the string into what we wwant and don't want
+    cout << "Found \"Area:\" at possition " << poss << endl;
+    following = dataString.substr(poss);
+
+
+    //Now read next 2 words
+    istringstream iss2(following);
+    iss2 >> strTag >> strCode;
+    if (iss.fail()) {
+        cerr << "Could not read module code" << endl;
+        cout << "Time for coffee" << endl;
+        return -1;
+    }
+
+    cout << "Subject group is " << strCode << endl;
+
     // Done
     cout << "All is well!" << endl;
     return 0;

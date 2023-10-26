@@ -22,6 +22,7 @@ int main()
     //Read first word (words are separated by spaces or newlines)
     istringstream iss(sentence);
     iss >> nextWord;
+    
 
     //Was a word actually read?
     if (iss.fail()) {
@@ -46,6 +47,34 @@ int main()
         cout << "We reached the end of the file" << endl;
     }
     
+    cout << endl << endl;
+    int count = 0;
+    cout << nextWord << endl;
+
+    //Keeps looping while not at the end of the file
+    while (!iss.eof())
+    {
+        // Get the next line and store it
+        iss >> nextWord;
+        if (iss.fail())
+        {
+            //There was no words read
+        }
+        count++;
+
+        cout << nextWord << endl;
+
+        if (nextWord == "Always.")
+        {
+            // Adds an extra line after Always
+            cout << endl;
+        }
+
+    }
+
+    cout << endl << "The total amount of words were: " << count << endl;
+
+
     //Done
     return 0;
 

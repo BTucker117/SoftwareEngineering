@@ -48,6 +48,21 @@ int main()
     // Calculate the next value (code + 1)
     // Write out the new module string (correct answer is COMP1001).
 
+    int ID;
+    for (unsigned int i = 0; i < 2; i++)
+    {
+        inputStream >> nextWord;
+    }
+
+    inputStream >> ID;
+
+    //Display the result
+    cout << "The course ID is " << ID << endl;
+
+    //Making the new module code
+
+    cout << "The new course code will be " << subjectArea << ID + 1 << endl;
+
     // (iii) Close
     inputStream.close();
 

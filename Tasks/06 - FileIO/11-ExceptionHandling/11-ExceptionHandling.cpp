@@ -47,12 +47,24 @@ int main()
             // Read the next word - it "should" be the module number, encoded as a string
             iss >> nextWord;
             if (!iss.fail()) {
-                //Convert a string to an integer
-                moduleNumber = stoi(nextWord);
-                //Write the new module code
-                cout << "COMP" << moduleNumber + 1 << endl;
-                //We are done! Break from the outer loop
-                break;
+                //Try to convert a string to an integer
+                try 
+                {
+
+                    moduleNumber = stoi(nextWord);
+                    //Write the new module code
+                    cout << "COMP" << moduleNumber + 1 << endl;
+                    //We are done! Break from the outer loop
+                    break;
+                }
+                catch (exception e)
+                {
+                    cout << "The code is broken and wont run" << endl;
+                    cout << "Exception thrown: " << e.what() << endl;
+                    cout << "ID cannot be stored as " << nextWord << endl;
+                   
+                    return -1;
+                }
             }
         }
     }
